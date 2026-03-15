@@ -1,0 +1,137 @@
+.footer {
+  background: linear-gradient(135deg, var(--dark-color) 0%, #1a1e2f 100%);
+  color: white;
+  padding: 10px 0 5px;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--secondary-color);
+}
+
+.rtl .footer-section h3::after {
+  left: auto;
+  right: 0;
+}
+
+.footer-about {
+  color: #b0b0b0;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.social-link:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.footer-links,
+.footer-contact,
+.footer-hours {
+  list-style: none;
+}
+
+.footer-links li,
+.footer-contact li,
+.footer-hours li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #b0b0b0;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+  padding-right: 10px;
+}
+
+.rtl .footer-links a:hover {
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.footer-contact li,
+.footer-hours li {
+  color: #b0b0b0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-contact i,
+.footer-hours i {
+  color: var(--secondary-color);
+  width: 20px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.footer-bottom span {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 968px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
